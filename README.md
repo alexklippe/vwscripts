@@ -13,7 +13,7 @@ $ su vaultwarden
 # Change Directory to vaultwarden home 
 $ cd ~/
 # Download the install script from github 
-$ wget https://github.com/alexklippe/vwscripts.git/vaultwarden_install_v1.sh
+$ wget https://raw.githubusercontent.com/alexklippe/vwscripts/main/vaultwarden_install_v1.sh
 # Set Script as executable 
 $ chmod +x install.sh
 # Run script 
@@ -26,7 +26,7 @@ Once complete go to https://yourdomain/admin
 Update
 ```
 # Download the update script from github 
-$ wget https://github.com/alexklippe/vwscripts.git/vaultwarden_update_v1.sh
+$ wget https://raw.githubusercontent.com/alexklippe/vwscripts/main/vaultwarden_update_v1.sh
 # Set Script as executable 
 $ chmod +x update.sh
 # Run script $ ./vaultwarden_update_v1.sh
