@@ -15,7 +15,7 @@ $ cd ~/
 # Download the install script from github 
 $ wget https://raw.githubusercontent.com/alexklippe/vwscripts/main/vaultwarden_install_v1.sh
 # Set Script as executable 
-$ chmod +x install.sh
+$ chmod +x vaultwarden_install_v1.sh
 # Run script 
 $ ./vaultwarden_install_v1.sh
 ```
@@ -28,7 +28,7 @@ Update
 # Download the update script from github 
 $ wget https://raw.githubusercontent.com/alexklippe/vwscripts/main/vaultwarden_update_v1.sh
 # Set Script as executable 
-$ chmod +x update.sh
+$ chmod +x vaultwarden_update_v1.sh
 # Run script $ ./vaultwarden_update_v1.sh
 ```
 Fill in info as requested as the script runs.
