@@ -3,8 +3,6 @@
 
 #### Adapted to run on debian 11 with PostgreSQL and (optional) behind a dedicated reverse proxy (configured on a different machine with SSL enabled)
 
-
-
 #check if running as root
 if [ $EUID -eq 0 ]; then
   echo -ne "\033[0;31mDo NOT run this script as root. Exiting.\e[0m\n"
@@ -16,15 +14,15 @@ echo -ne "Enter your created username if you havent done this please do it now, 
 read username
 
 #Enter domain
-while [[ $domain != *[.]*[.]* ]]
-do
+#while [[ $domain != *[.]*[.]* ]]
+#do
 echo -ne "Enter your Domain${NC}: "
 read domain
-done
-
+#done
+ 
 #Option to install Nginx+SelfSignedCert
 enable_nginx=1
-read -p "Do you wish to install with Nginx and Letsencrypt? [Y/N, Default:Yes] " yn
+read -p "Do you wish to install with Nginx? [Y/N, Default:Yes] " yn
 case $yn in
     [Nn]* ) enable_nginx=0;;
     * ) enable_nginx=1;;
@@ -32,7 +30,7 @@ esac
 
 #Option to install Letsencrypt
 enable_lets=1
-read -p "Do you wish to install with Nginx and Letsencrypt? [Y/N, Default:Yes] " yn
+read -p "Do you wish to install with Letsencrypt? [Y/N, Default:Yes] " yn
 case $yn in
     [Nn]* ) enable_lets=0;;
     * ) enable_lets=1;;
@@ -179,8 +177,9 @@ fi
 fi
 
 #Compile vaultwarden
-#git clone https://github.com/dani-garcia/vaultwarden.git
-git clone https://github.com/BlackDex/vaultwarden.git
+git clone https://github.com/dani-garcia/vaultwarden.git
+read -p "Check source code and Press enter to continue"
+#git clone https://github.com/BlackDex/vaultwarden.git
 cd vaultwarden/
 git checkout
 #cargo build --features sqlite --release
